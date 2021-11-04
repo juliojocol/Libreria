@@ -6,10 +6,13 @@
             <div class="date">
                 <p>publicado: {{ publicacion.fecha_publicacion }}</p>
             </div>
+        {% else %}
+            <a class="button is-primary" href="{% url 'publicacion_publicar' pk=publicacion.pk %}"><span class="fa fa-check"></span></a>
         {% endif %}
-            <a class="button is-primary" href="{% url 'publicacion_editar' pk=publicacion.pk %}"><span class="fa fa-check"></span></a>
-            <h2> {{publicacion.producto}}</h2>
-           <p> {{publicacion.descripcion | linebreaksbr }}  </p>
-           <h5> {{publicacion.precio | linebreaksbr }}</h5>
+        <a class="button is-info" href="{% url 'publicacion_editar' pk=publicacion.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="button is-danger" href="{% url 'publicacion_eliminar' pk=publicacion.pk %}"><span class="fa fa-eraser"></span></a>
+        <h2> {{publicacion.producto}}</h2>
+        <p> {{publicacion.descripcion | linebreaksbr }}  </p>
+        <h5> {{publicacion.precio | linebreaksbr }}</h5>
     </div>
 {% endblock %}

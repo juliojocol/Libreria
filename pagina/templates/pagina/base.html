@@ -38,15 +38,15 @@
                   <a class="navbar-item" href="{% url 'publicacion_nueva' %}">
                   Nuevo
                   </a>
-                  <a class="navbar-item" href="">
+                  <a class="navbar-item" href="{% url 'publicacion_borrador_lista' %}">
                     Borradores
                     </a>
                   <span class="navbar-item">
-                  <a class="button is-primary is-inverted">
+                      <a class="button is-primary is-inverted" href="{% url 'login' %}">                    
                       <span class="icon">
-                      <i class="fab fa-sign-in-alt"  href="" ></i>
+                        <i class="fab fa-sign-in-alt"   ></i>
                       </span>
-                      <span>login</span>
+                      <span>Login</span>
                   </a>
                   </span>
               </div>
